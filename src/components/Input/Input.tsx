@@ -8,7 +8,7 @@ const Input = () => {
   const [todoText, setTodoText] = useState(''); // Use state to manage the input value
   const dispatch = useDispatch();
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTodoText(e.target.value);
   };
 

@@ -4,16 +4,24 @@ import { removeTodo, completedTodo } from "../../store/todos"; // Import the rem
 import styles from "./List.module.css";
 import { increaseScore, reduceScore } from "../../store/score";
 
+
+interface Todo {
+    id: number; // Assuming the id is a number
+    text: string;
+    completed: boolean;
+  }
+  
+
 export const List = () => {
   const dispatch = useDispatch();
-  const todos = useSelector((state: unknown) => state.todos.todos);
+  const todos = useSelector((state: {todos: {todos: Todo[]}}) => state.todos.todos);
 
-  const handleRemoveTodo = (todo: unknown) => {
+  const handleRemoveTodo = (todo: Todo) => {
     dispatch(removeTodo(todo.id));
     dispatch(reduceScore());
   };
 
-  const handleCompleteTodo = (todo: unknown) => {
+  const handleCompleteTodo = (todo: Todo) => {
     console.log(todo);
     dispatch(completedTodo(todo.id));
     if (todo.completed) {
@@ -27,15 +35,7 @@ export const List = () => {
     <div className={styles.todoContainer}>
       {todos.map(
         (
-          todo:
-            | string
-            | number
-            | boolean
-            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-            | Iterable<React.ReactNode>
-            | React.ReactPortal
-            | null
-            | undefined,
+          todo: Todo,
           index: React.Key | null | undefined
         ) => (
           <ul className={styles.todoList}>
