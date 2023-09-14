@@ -1,0 +1,15 @@
+.headingContainer h1 {
+    font-size: 3rem; /* Default font size */
+}
+
+@media screen and (max-width: 768px) {
+    .headingContainer h1 {
+        font-size: 2rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .headingContainer h1 {
+        font-size: 1.5rem; /* Further adjusted font size for even smaller screens */
+    }
+}

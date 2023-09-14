@@ -1,0 +1,77 @@
+.todoContainer {
+  /* From https://css.glass */
+  background: rgba(81, 74, 74, 0.21);
+  margin-top: 3%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.9px);
+  -webkit-backdrop-filter: blur(9.9px);
+  border: 1px solid rgba(169, 165, 165, 0.51);
+}
+
+.todoList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.553);
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.todo {
+  padding-left: 10px;
+  font-size: 1.2rem;
+  display:flex;
+  align-items: center;
+}
+
+.todoCompleted {
+    text-decoration: line-through;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    display:flex;
+    align-items: center;
+  }
+
+.completedButton {
+  width: 24px; /* Set the width */
+  height: 24px; /* Set the height */
+  margin-right: 10px;
+  border: none;
+  background-color: #4caf50 !important;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.todoButtons{
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Adjusted styles for smaller screens */
+  
+    .todoList {
+      width: 80%; /* Take full width on smaller screens */
+    }
+  
+    .todo {
+      font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+  
+    .completedButton {
+      width: 20px; /* Adjusted width for smaller screens */
+      height: 20px; /* Adjusted height for smaller screens */
+    }
+  }
+  
+  
+  
+  

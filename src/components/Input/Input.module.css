@@ -1,0 +1,24 @@
+.todoInput{
+    padding: 10px;
+    width: 60%;
+}
+
+.addButton{
+    padding:10px;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    /* Larger screen styles */
+    .todoInput {
+        padding: 20px; /* Default padding for larger screens */
+        width: 80%; /* Default width for larger screens */
+    }
+
+    .addButton {
+        padding: 20px; /* Default padding for larger screens */
+        margin-left: 10px; /* Default margin for larger screens */
+    }
+
+ 
+}

@@ -1,0 +1,24 @@
+.scoreContainer {
+    /* From https://css.glass */
+    background: rgba(81, 74, 74, 0.21);
+    margin-top: 3%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+    border: 1px solid rgba(169, 165, 165, 0.51);
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Adjusted styles for smaller screens */
+  
+    .scoreContainer {
+      width: 90%; /* Adjusted width for smaller screens */
+      margin: 3% auto; /* Centered with some margin on top and bottom */
+      padding: 10px; /* Added padding for better spacing */
+    }
+  }
+
+  
+  
+  
